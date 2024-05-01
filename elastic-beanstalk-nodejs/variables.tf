@@ -260,7 +260,7 @@ variable "node_version" {
 
 variable "proxy_server" {
   type    = string
-  default = "none"
+  default = "nginx"
   description = "Specifies which web server should be used to proxy connections to Node.js."
 }
 
