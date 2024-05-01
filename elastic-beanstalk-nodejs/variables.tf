@@ -2,48 +2,48 @@
 ## App Variables
 ##################################################
 variable "aws_region" {
-  type    = "string"
+  type    = string
   default = "us-west-2"
   description = "The AWS Region"
 }
 
 variable "aws_profile" {
-  type    = "string"
+  type    = string
   default = "default"
   description = "The AWS Profile credentials profile"
 }
 
 # Application
 variable "service_name" {
-  type    = "string"
+  type    = string
   description = "The application name"
 }
 variable "service_description" {
-  type    = "string"
+  type    = string
   default = ""
   description = "The application description"
 }
 variable "env" {
-  type    = "string"
+  type    = string
   default = "dev"
   description = "The environment (dev, stage, prod)"
 }
 
 # Instance
 variable "eb_solution_stack_name" {
-  type    = "string"
+  type    = string
   default = "64bit Amazon Linux 2023 v6.1.3 running Node.js 20"
   description = "The Elastic Beanstalk solution stack name"
 }
 
 variable "instance_type" {
-  type    = "string"
+  type    = string
   default = "t3.small"
   description = "The EC2 instance type"
 }
 
 variable "instance_volume_type" {
-  type    = "string"
+  type    = string
   default = "gp2"
   description = "Volume type (magnetic, general purpose SSD or provisioned IOPS SSD) to use for the root Amazon EBS volume attached to your environment's EC2 instances."
   # standard for magnetic storage
@@ -52,7 +52,7 @@ variable "instance_volume_type" {
 }
 
 variable "instance_volume_size" {
-  type    = "string"
+  type    = string
   default = "10"
   description = "Storage capacity of the root Amazon EBS volume in whole GB. Required if you set RootVolumeType to provisioned IOPS SSD."
   # 10 to 16384 GB for general purpose and provisioned IOPS SSD.
@@ -60,7 +60,7 @@ variable "instance_volume_size" {
 }
 
 variable "instance_volume_iops" {
-  type    = "string"
+  type    = string
   default = "100"
   description = "Desired input/output operations per second (IOPS) for a provisioned IOPS SSD root volume."
   # The maximum ratio of IOPS to volume size is 30 to 1. For example, a volume with 3000 IOPS must be at least 100 GB.
@@ -68,51 +68,51 @@ variable "instance_volume_iops" {
 }
 
 variable "ssh_key_name" {
-  type    = "string"
+  type    = string
   default = ""
   description = "The EC2 SSH KeyPair Name"
 }
 
 variable "public_ip" {
-  type = "string"
+  type = string
   default = "false"
   description = "EC2 instances must have a public ip (true | false)"
 }
 
 variable "min_instance" {
-  type    = "string"
+  type    = string
   default = "1"
   description = "The minimum number of instances"
 }
 
 variable "max_instance" {
-  type    = "string"
+  type    = string
   default = "1"
   description = "The maximum number of instances"
 }
 
 variable "deployment_policy" {
-  type    = "string"
+  type    = string
   default = "Rolling"
   description = "The deployment policy"
   # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html?icmpid=docs_elasticbeanstalk_console
 }
 
 variable "environmentType" {
-  type    = "string"
+  type    = string
   default = "LoadBalanced"
   description = "Set to SingleInstance to launch one EC2 instance with no load balancer."
 }
 
 # Load Balancing
 variable "loadBalancerType" {
-  type    = "string"
+  type    = string
   default = "application"
   description = "The type of load balancer for your environment. (classic, application, network)"
 }
 
 variable "port" {
-  type    = "string"
+  type    = string
   default = "3000"
   description = "The instance port"
 }
