@@ -69,7 +69,7 @@ variable "instance_volume_iops" {
 
 variable "ssh_key_name" {
   type    = "string"
-  default = "Ireland_VPC"
+  default = ""
   description = "The EC2 SSH KeyPair Name"
 }
 
