@@ -32,7 +32,7 @@ variable "env" {
 # Instance
 variable "eb_solution_stack_name" {
   type    = "string"
-  default = "64bit Amazon Linux 2018.03 v4.8.1 running Node.js"
+  default = "64bit Amazon Linux 2023 v6.1.3 running Node.js 20"
   description = "The Elastic Beanstalk solution stack name"
 }
 
