@@ -243,11 +243,6 @@ resource "aws_elastic_beanstalk_environment" "eb_env" {
   }
   setting {
     namespace = "aws:elasticbeanstalk:container:nodejs"
-    name      = "NodeVersion"
-    value     = var.node_version
-  }
-  setting {
-    namespace = "aws:elasticbeanstalk:container:nodejs"
     name      = "ProxyServer"
     value     = var.proxy_server
   }
